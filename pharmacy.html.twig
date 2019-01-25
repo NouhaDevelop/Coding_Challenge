@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pharmacy Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="PharmacyHome/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="PharmacyHome/images/avatar.jpg" alt="" /></span>
+							<h1 id="title" >Espace Pharmacie</h1>
+							<p class="fa fa-plus-square" >{{userPh.nom}}</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon fa-home">Accueil</span></a></li>
+								<li><a href="#produit" id="portfolio-link"><span class="icon fa-th">Produits</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon fa-user">Compte</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon fa-envelope">Contact </span></a></li>	
+							</ul>
+
+						</nav>
+
+				</div>
+
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="{{ path('security_logout') }}" class="icon fa fa-sign-out"><span class="label">Déconnexion</span></a></li>
+
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							
+
+							<footer style="margin-top: 330px";>
+								<a href="{{ path('security_permanence',{'id':userPh.id})}}" class="button scrolly">Pharmacie en garde </a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Produits -->
+					<section id="produit" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Mes Produits</h2>
+							</header>
+
+				
+
+
+							<div class="form-group" style="margin-top: 50px";>
+								<a href="{{ path('gestion_ajouter') }}" class="button scrolly">Ajouter un Produit </a>
+							
+								<a href="{{ path('gestion_recuperer') }}" class="button scrolly">Lister vos Produits</a>
+
+							
+							</div>
+							
+
+						</div>
+					</section>
+
+
+				<!-- Ajouter Prod -->
+					
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Mon Compte</h2>
+							</header>
+
+							<form>
+							  <fieldset>
+							  	 <center><div class="card text-white bg-primary mb-3" style="max-width: 50rem ; max-height: 50rem ">
+			                          <div class="card-header" >Vous pouvez modifier vos informations</div>
+
+				                          	 <div class="card-body">
+											  	 {% block body %} {% endblock %}
+											    
+											 </div>
+									  </div>
+								</center>
+
+							</fieldset>
+							<div class="col-12" style="margin-top: 50px";>
+										<a href="{{ path('security_compte',{'id':userPh.id} ) }}" class="button scrolly">Modifier </a>
+									</div>
+							  
+							</form>
+							
+
+						</div>
+					</section>
+
+				
+				<!-- Contact -->
+					<section id="contact" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Envoyer le Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+				
+
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="PharmacyHome/assets/js/jquery.min.js"></script>
+			<script src="PharmacyHome/assets/js/jquery.scrolly.min.js"></script>
+			<script src="PharmacyHome/assets/js/jquery.scrollex.min.js"></script>
+			<script src="PharmacyHome/assets/js/browser.min.js"></script>
+			<script src="PharmacyHome/assets/js/breakpoints.min.js"></script>
+			<script src="PharmacyHome/assets/js/util.js"></script>
+			<script src="PharmacyHome/assets/js/main.js"></script>
+
+	</body>
+</html>

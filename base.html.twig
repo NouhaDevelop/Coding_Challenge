@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PharmaVie</title>
+
+  <!-- css -->
+  <link href="template_P/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="template_P/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="template_P/plugin/cubeportfolio/css/cubeportfolio.min.css">
+  <link href="template_P/css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="template_P/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="template_P/css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="template_P/css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="template_P/css/animate.css" rel="stylesheet" />
+  <link href="template_P/css/style.css" rel="stylesheet">
+
+ {% block stylesheet %}   {% endblock %} 
+
+  <!-- boxed bg -->
+  <link id="bodybg" href="template_P/bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <!-- template skin -->
+  <link id="t-colors" href="template_P/color/default.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      
+      <div class="container navigation">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+          <a class="navbar-brand" href="/accueil">
+                    <p><font size="7" color="green">Pharma</font><font size="7">Vie</font></p>
+                </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li class="active"><a href="/accueil">Accueil</a></li>
+             <li><a href="/rechercher">Rechercher</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/connexion">Se connecter</a></li>
+          
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <div class="container" >
+        {% block body %} {% endblock %}
+    <div>
+    
+   
+   
+
+    <footer>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>A propos <font color="green" > Pharma</font>Vie</h5>
+                <p>
+                  Un site web qui vous facilite la vie
+                </p>
+              </div>
+            </div>
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Information</h5>
+                <ul>
+                  <li><a href="#">Accueil</a></li>
+                  <li><a href="#">Termes & conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+
+                <ul>
+                  <li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+								</span> Lundi au Dimanche, 24/24
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+								</span> 06222123449
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+								</span> PharmaVie@gmail.com
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Our location</h5>
+                <p>Rabat</p>
+
+              </div>
+            </div>
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul class="company-social">
+                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                  <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </footer>    
+  </div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="plugin/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

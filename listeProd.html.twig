@@ -1,0 +1,45 @@
+{% extends "fase.html.twig" %}
+
+{% block body %}
+
+							<header>
+								<center><h2>Mes Produits</h2></center>
+							</header>
+
+				
+
+						<div class="row">
+
+						
+							{% for produit in produits %}
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="uploads/{{ produit.image }}" alt="none"/></a>
+										<header>
+											<center><h3>{{ produit.title }}</h3></center>
+													<p><b>Catégorie :  {{ produit.categorie }}</b></p>
+													<p>Quantité :  {{ produit.quantite }}</p>
+													<li><a href="{{ path('gestion_modifier',{'id':produit.id} ) }}" class="icon fa fa-pencil-square-o"><span class="label">Modifier</span></a>
+
+													<a href="{{ path('gestion_delete', {'id':produit.id}) }}" class="icon fa fa-trash" style="margin-left: 200px";><span class="label">Supprimer</span></a></li>
+										
+										</header>
+										{% for flashMessage in app.session.flashbag.get('remarque') %}
+
+											<div class="alert alert-success">
+											    {{ flashMessage }}
+											</div>
+
+										{% endfor %}
+									</article>
+									
+								</div>
+								
+							{% endfor %}
+					
+						</div>
+
+						
+
+
+{% endblock %}
